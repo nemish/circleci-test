@@ -6,6 +6,7 @@ jobs:
     steps:
       - checkout
       - run: echo OLOLO
+
   semantic_release:
     docker:
       - image: 'circleci/node:latest'
@@ -23,8 +24,9 @@ workflows:
   build:
     jobs:
       - test:
-        context: global
+          context: global
+
       - semantic_release:
-        context: global
-        requires:
-          - test
+          context: global
+          requires:
+            - test
