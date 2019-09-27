@@ -1,5 +1,11 @@
 version: 2
 jobs:
+  test:
+    docker:
+      - image: 'circleci/node:latest'
+    steps:
+      - checkout
+      - run: echo OLOLO
   build:
     docker:
       - image: 'circleci/node:latest'
