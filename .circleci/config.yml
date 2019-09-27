@@ -23,8 +23,7 @@ workflows:
   version: 2
   build:
     jobs:
-      - test:
-          context: global
+      - test
 
       - semantic_release:
           context: global
